@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "tool function store",
   "main": "./dist/index.cjs.js",
+  "type": "module",
   "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
   "files": [
@@ -18,7 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/zxx-alia/zxx-tool-fun.git"
   },
-  "keywords": ["utils"],
+  "keywords": [
+    "utils"
+  ],
   "author": "zxx",
   "license": "MIT",
   "publishConfig": {
