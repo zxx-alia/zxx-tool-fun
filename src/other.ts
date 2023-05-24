@@ -61,3 +61,38 @@ export function getAddress(args: any): string {
     }
     return res;
 };
+
+/**
+ * 防抖函数
+ * @param func （Function）函数体
+ * @param delay （number）延迟时间
+ */
+export function debounce(func: Function, delay: number = 1000) {
+    let timer: number | null = null;
+    return function (this: unknown, ...args: any) {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.call(this, ...args)
+        }, delay)
+    }
+
+}
+
+/**
+ * 节流函数
+ * @param func （Function）函数体
+ * @param delay （number）延迟时间
+ * @returns 
+ */
+export function throttle(func: Function, delay: number = 1000) {
+    let timer: number | null = null;
+    return function (this: unknown, ...args: any) {
+        if (!timer) {
+            func.call(this, ...args)
+            timer = setTimeout(() => {
+                if (timer) clearTimeout(timer);
+                timer = null;
+            }, delay)
+        }
+    }
+}
