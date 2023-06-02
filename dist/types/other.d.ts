@@ -15,3 +15,16 @@ export declare function isJSON(str: any): boolean | undefined;
  * @returns (string) 字符串形式的地址
  */
 export declare function getAddress(args: any): string;
+/**
+ * 防抖函数
+ * @param func （Function）函数体
+ * @param delay （number）延迟时间
+ */
+export declare function debounce(func: Function, delay?: number): (this: unknown, ...args: any) => void;
+/**
+ * 节流函数
+ * @param func （Function）函数体
+ * @param delay （number）延迟时间
+ * @returns
+ */
+export declare function throttle(func: Function, delay?: number): (this: unknown, ...args: any) => void;
